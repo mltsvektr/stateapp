@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class State {
     private String name = "Russia";
-    private ArrayList<Region> regions = new ArrayList<Region>();
+    private ArrayList<Region> regions;
     private int area = 34;
     private static State instance = null;
     private State() {
