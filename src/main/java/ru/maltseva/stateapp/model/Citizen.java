@@ -42,6 +42,7 @@ public class Citizen {
         return state;
     }
 
+
     @Override
     public String toString() {
         return "Citizen{" +
@@ -49,7 +50,7 @@ public class Citizen {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
-                ", state=" + state +
+                ", state=" + state.getName() +
                 '}';
     }
 }
