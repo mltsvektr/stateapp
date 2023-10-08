@@ -3,6 +3,9 @@ package ru.maltseva.stateapp.model;
 import java.util.ArrayList;
 
 public class State {
+    private String name = "Russia";
+    private ArrayList<Region> regions = new ArrayList<Region>();
+    private int area = 34;
     private static State instance = null;
     private State() {
     }
@@ -12,7 +15,13 @@ public class State {
         }
         return instance;
     }
-    private String name;
-    private static ArrayList<Region> regions = new ArrayList<Region>();
-    private String area;
+
+
+    @Override
+    public String toString() {
+        return "State{" +
+                "name='" + name + '\'' +
+                ", area=" + area +
+                '}';
+    }
 }
