@@ -45,4 +45,17 @@ public class UserServices {
                 .collect(Collectors.toList());
         return namesLength.toString();
     }
+
+    public static String showFirstNameWithFirstChar(CitizenStorage citizenStorage) {
+        Scanner console = new Scanner(System.in);
+        String symbol = console.nextLine();
+        ArrayList<String> citizensFirstName = new ArrayList<>();
+        for (Citizen citizen : citizenStorage.getCitizenMap().values()) {
+            citizensFirstName.add(citizen.getFirstName());
+        }
+        List<String> citizensFirstNameWithFirstChar = citizensFirstName.stream()
+                .filter(citizenFirstName -> (citizenFirstName.startsWith(symbol)))
+                .collect(Collectors.toList());
+        return citizensFirstNameWithFirstChar.toString();
+    }
 }

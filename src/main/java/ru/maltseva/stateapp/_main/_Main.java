@@ -16,6 +16,7 @@ public class _Main {
 //        System.out.println(citizenStorage.getCitizenMap());
 //        System.out.println(UserServices.getCitizenAverageAge(citizenStorage));
 //        System.out.println(UserServices.showNamesWithNLetters(citizenStorage));
+        System.out.println(UserServices.showFirstNameWithFirstChar(citizenStorage));
             }
         }
 
