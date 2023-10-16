@@ -9,12 +9,22 @@ public class NamesGenerator {
         StringBuilder wholeName = new StringBuilder();
         int result = NamesGenerator.generateRandomNumber(5, 10);
         for (int i = 0; i < result; i++) {
-            if (i % 2 == 0) {
-                int index = NamesGenerator.generateRandomNumber(0, vowels.length);
-                wholeName.append(vowels[index]);
+            if (result % 2 == 0) {
+                if (i % 2 == 0) {
+                    int index = NamesGenerator.generateRandomNumber(0, vowels.length);
+                    wholeName.append(vowels[index]);
+                } else {
+                    int index = NamesGenerator.generateRandomNumber(0, consonants.length);
+                    wholeName.append(consonants[index]);
+                }
             } else {
-                int index = NamesGenerator.generateRandomNumber(0, consonants.length);
-                wholeName.append(consonants[index]);
+                if (i % 2 == 0) {
+                    int index = NamesGenerator.generateRandomNumber(0, consonants.length);
+                    wholeName.append(consonants[index]);
+                } else {
+                    int index = NamesGenerator.generateRandomNumber(0, vowels.length);
+                    wholeName.append(vowels[index]);
+                }
             }
         }
         return wholeName.toString();
