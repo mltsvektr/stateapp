@@ -1,7 +1,9 @@
 package ru.maltseva.stateapp.model.services;
 
 import ru.maltseva.stateapp.model.Citizen;
+import ru.maltseva.stateapp.model.City;
 import ru.maltseva.stateapp.model.Region;
+import ru.maltseva.stateapp.model.State;
 import ru.maltseva.stateapp.model.storage.CitizenStorage;
 
 import java.util.ArrayList;
@@ -11,6 +13,21 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class UserServices {
+
+    public static String getCapitalCity(State state) {
+        City capitalCity = state.getCapitalCity();
+        return capitalCity.getName();
+    }
+
+    public static String getRegionsAmount(State state) {
+        int amount = state.getRegions().size();
+        return Integer.toString(amount);
+    }
+
+    public static String getStateArea(State state) {
+        int area = state.getArea();
+        return Integer.toString(area);
+    }
 
     public static String getRegionsCapitals(ArrayList<Region> regions) {
         StringBuilder result = new StringBuilder();
@@ -36,7 +53,7 @@ public class UserServices {
         return Integer.toString(average);
     }
 
-    public static String showNamesWithNLetters(CitizenStorage citizenStorage) {
+    public static String getNamesContainingNLetters(CitizenStorage citizenStorage) {
         Scanner console = new Scanner(System.in);
         int number = console.nextInt();
         List<String> namesLength = citizenStorage.getCitizenMap().values().stream()
@@ -46,7 +63,7 @@ public class UserServices {
         return namesLength.toString();
     }
 
-    public static String showFirstNameWithFirstChar(CitizenStorage citizenStorage) {
+    public static String getFirstNameWithFirstChar(CitizenStorage citizenStorage) {
         Scanner console = new Scanner(System.in);
         String symbol = console.nextLine();
         ArrayList<String> citizensFirstName = new ArrayList<>();
