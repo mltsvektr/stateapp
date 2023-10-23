@@ -53,20 +53,16 @@ public class UserServices {
     }
 
     public static String getNamesContainingNLetters(CitizenStorage citizenStorage, int number) {
-        List<String> namesLength = citizenStorage.getCITIZENMAP().values().stream()
-                .map(element1 -> element1.getFirstName())
-                .filter(firstName -> (firstName.length() == number))
+        List<Citizen> namesLength = citizenStorage.getCITIZENMAP().values().stream()
+                .filter(citizen -> (citizen.getFirstName().length() == number))
                 .collect(Collectors.toList());
         return namesLength.toString();
     }
 
     public static String getFirstNameWithFirstChar(CitizenStorage citizenStorage, String symbol) {
-        ArrayList<String> citizensFirstName = new ArrayList<>();
-        for (Citizen citizen : citizenStorage.getCITIZENMAP().values()) {
-            citizensFirstName.add(citizen.getFirstName());
-        }
-        List<String> citizensFirstNameWithFirstChar = citizensFirstName.stream()
-                .filter(citizenFirstName -> (citizenFirstName.startsWith(symbol)))
+        ArrayList<Citizen> citizens = new ArrayList<>(citizenStorage.getCITIZENMAP().values());
+        List<Citizen> citizensFirstNameWithFirstChar = citizens.stream()
+                .filter(citizen -> (citizen.getFirstName().startsWith(symbol)))
                 .collect(Collectors.toList());
         return citizensFirstNameWithFirstChar.toString();
     }
