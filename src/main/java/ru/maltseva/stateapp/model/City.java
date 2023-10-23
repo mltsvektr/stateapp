@@ -27,7 +27,7 @@ public class City {
     private void putIntoStorage() {
         CitizenStorage citizenStorage = CitizenStorage.getInstance();
         for (Citizen element : citizens) {
-            citizenStorage.getCitizenMap().put(element.getID(), element);
+            citizenStorage.getCITIZENMAP().put(element.getID(), element);
         }
     }
 

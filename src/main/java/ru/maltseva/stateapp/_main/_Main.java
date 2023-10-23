@@ -1,12 +1,10 @@
 package ru.maltseva.stateapp._main;
 
-import ru.maltseva.stateapp.model.State;
-import ru.maltseva.stateapp.model.storage.CitizenStorage;
+import ru.maltseva.stateapp.model.util.Menu;
 
 public class _Main {
     public static void main(String[] args) {
-        State state = State.getInstance();
-        state.fillState();
-        CitizenStorage citizenStorage = CitizenStorage.getInstance();
+        Menu menu = new Menu();
+        menu.startMenu();
     }
 }

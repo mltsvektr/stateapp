@@ -9,7 +9,6 @@ import ru.maltseva.stateapp.model.storage.CitizenStorage;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class UserServices {
@@ -39,7 +38,7 @@ public class UserServices {
 
     public static String getCitizenAverageAge(CitizenStorage citizenStorage) {
         int agesSum;
-        Optional<Integer> agesSumOptional = citizenStorage.getCitizenMap().values().stream()
+        Optional<Integer> agesSumOptional = citizenStorage.getCITIZENMAP().values().stream()
                 .map(element1 -> element1.getAge())
                 .reduce((e1, e2) -> e1 + e2);
         if (agesSumOptional.isPresent()) {
@@ -48,26 +47,22 @@ public class UserServices {
             return "null";
         }
         int quantity;
-        quantity = citizenStorage.getCitizenMap().size();
+        quantity = citizenStorage.getCITIZENMAP().size();
         int average = agesSum / quantity;
         return Integer.toString(average);
     }
 
-    public static String getNamesContainingNLetters(CitizenStorage citizenStorage) {
-        Scanner console = new Scanner(System.in);
-        int number = console.nextInt();
-        List<String> namesLength = citizenStorage.getCitizenMap().values().stream()
+    public static String getNamesContainingNLetters(CitizenStorage citizenStorage, int number) {
+        List<String> namesLength = citizenStorage.getCITIZENMAP().values().stream()
                 .map(element1 -> element1.getFirstName())
                 .filter(firstName -> (firstName.length() == number))
                 .collect(Collectors.toList());
         return namesLength.toString();
     }
 
-    public static String getFirstNameWithFirstChar(CitizenStorage citizenStorage) {
-        Scanner console = new Scanner(System.in);
-        String symbol = console.nextLine();
+    public static String getFirstNameWithFirstChar(CitizenStorage citizenStorage, String symbol) {
         ArrayList<String> citizensFirstName = new ArrayList<>();
-        for (Citizen citizen : citizenStorage.getCitizenMap().values()) {
+        for (Citizen citizen : citizenStorage.getCITIZENMAP().values()) {
             citizensFirstName.add(citizen.getFirstName());
         }
         List<String> citizensFirstNameWithFirstChar = citizensFirstName.stream()

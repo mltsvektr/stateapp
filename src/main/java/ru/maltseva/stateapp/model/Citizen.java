@@ -42,7 +42,6 @@ public class Citizen {
         return state;
     }
 
-
     @Override
     public String toString() {
         return "Citizen{" +

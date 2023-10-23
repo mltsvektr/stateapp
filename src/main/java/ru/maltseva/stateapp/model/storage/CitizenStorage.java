@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class CitizenStorage {
     private static CitizenStorage instance = null;
-    private Map<Integer, Citizen> citizenMap = new HashMap<>();
+    private final Map<Integer, Citizen> CITIZENMAP = new HashMap<>();
     private CitizenStorage(){
 
     }
@@ -17,11 +17,7 @@ public class CitizenStorage {
         } return instance;
     }
 
-    public Map<Integer, Citizen> getCitizenMap() {
-        return citizenMap;
-    }
-
-    public void setCitizenMap(Map<Integer, Citizen> citizenMap) {
-        this.citizenMap = citizenMap;
+    public Map<Integer, Citizen> getCITIZENMAP() {
+        return CITIZENMAP;
     }
 }
