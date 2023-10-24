@@ -47,11 +47,13 @@ public class Menu {
                     userController.getCitizenAverageAge(citizenStorage);
                     break;
                 case (6):
+                    System.out.print("Enter the desired length of name: ");
                     Scanner console = new Scanner(System.in);
                     int number = console.nextInt();
                     userController.getNamesContainingNLetters(citizenStorage, number);
                     break;
                 case (7):
+                    System.out.print("Enter symbol: ");
                     Scanner console1 = new Scanner(System.in);
                     String symbol = console1.nextLine();
                     userController.getFirstNameWithFirstChar(citizenStorage, symbol);

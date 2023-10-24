@@ -22,7 +22,7 @@ public class State {
     }
 
     public void fillState() {
-        this.regions = CollectionGenerator.generateCollection(Region.class, 3);
+        this.regions = CollectionGenerator.generateCollection(Region.class, 4);
         this.capitalCity = regions.get(0).getDistricts().get(0).getCities().get(0);
     }
 
