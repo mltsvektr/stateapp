@@ -1,6 +1,6 @@
 package ru.maltseva.stateapp.model.storage;
 
-import ru.maltseva.stateapp.model.Citizen;
+import ru.maltseva.stateapp.model.entity.Citizen;
 
 import java.util.HashMap;
 import java.util.Map;

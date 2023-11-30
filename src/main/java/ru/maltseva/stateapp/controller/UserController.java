@@ -1,7 +1,7 @@
 package ru.maltseva.stateapp.controller;
 
-import ru.maltseva.stateapp.model.Region;
-import ru.maltseva.stateapp.model.State;
+import ru.maltseva.stateapp.model.entity.Region;
+import ru.maltseva.stateapp.model.entity.State;
 import ru.maltseva.stateapp.model.services.UserServices;
 import ru.maltseva.stateapp.model.storage.CitizenStorage;
 import ru.maltseva.stateapp.view.ResultWriter;

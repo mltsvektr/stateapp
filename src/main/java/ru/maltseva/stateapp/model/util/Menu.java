@@ -1,7 +1,7 @@
 package ru.maltseva.stateapp.model.util;
 
 import ru.maltseva.stateapp.controller.UserController;
-import ru.maltseva.stateapp.model.State;
+import ru.maltseva.stateapp.model.entity.State;
 import ru.maltseva.stateapp.model.storage.CitizenStorage;
 
 import java.util.Scanner;

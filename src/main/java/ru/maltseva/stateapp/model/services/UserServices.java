@@ -1,9 +1,9 @@
 package ru.maltseva.stateapp.model.services;
 
-import ru.maltseva.stateapp.model.Citizen;
-import ru.maltseva.stateapp.model.City;
-import ru.maltseva.stateapp.model.Region;
-import ru.maltseva.stateapp.model.State;
+import ru.maltseva.stateapp.model.entity.Citizen;
+import ru.maltseva.stateapp.model.entity.City;
+import ru.maltseva.stateapp.model.entity.Region;
+import ru.maltseva.stateapp.model.entity.State;
 import ru.maltseva.stateapp.model.storage.CitizenStorage;
 
 import java.util.ArrayList;

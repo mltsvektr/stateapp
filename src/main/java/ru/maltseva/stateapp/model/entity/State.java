@@ -1,4 +1,4 @@
-package ru.maltseva.stateapp.model;
+package ru.maltseva.stateapp.model.entity;
 
 import ru.maltseva.stateapp.model.services.CollectionGenerator;
 
